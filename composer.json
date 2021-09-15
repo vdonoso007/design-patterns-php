@@ -1,0 +1,14 @@
+{
+"name": "victor/design-patterns",
+  "license": "MIT",
+  "type": "project",
+  "description": "Ventaja Europa Backend Web Service",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+      "psr-4": {
+          "Design\\Patterns\\Apps\\": ["app"]
+      }
+  }
+}

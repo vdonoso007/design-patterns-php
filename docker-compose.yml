@@ -1,0 +1,21 @@
+version: "3.7"
+
+services: 
+  apache:
+    image: design-patterns/apache
+    build:
+      context: .
+      dockerfile: docker/apache/Dockerfile
+    volumes: 
+      - .:/var/www/design-patterns:delegated
+    ports: 
+      - 8087:8000
+  php:
+    image: design-patterns/php
+    build: 
+      context: .
+      dockerfile: docker/php/Dockerfile
+    volumes: 
+      - .:/var/www/design-patterns:delegated
+    ports: 
+      - 9000:9000

@@ -12,6 +12,7 @@ class Usuario
     private string $email;
     private string $telefono;
     private string $direccion;
+    private bool $medioContacto;
 
     private function __construct(
         string $nombre, 
@@ -20,6 +21,7 @@ class Usuario
     {
         $this->nombre = $nombre;
         $this->apellido = $apellido;
+        $this->medioContacto = false;
     }
 
     public static function Make(string $nombre, string $apellido): self
@@ -87,5 +89,12 @@ class Usuario
                 $this->email." ".
                 $this->telefono." ".
                 $this->direccion;
+    }
+
+    public function setMedioContacto(bool $medioContacto)
+    {
+        $this->medioContacto = $medioContacto;
+
+        return $this;
     }
 }
